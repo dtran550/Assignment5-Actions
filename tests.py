@@ -24,6 +24,5 @@ class TestCase(unittest.TestCase):
         self.assertEqual(0, task.areaCircle(radius))
 
 
-
 if __name__ == '__main__':
     unittest.main()
