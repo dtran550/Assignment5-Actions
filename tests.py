@@ -47,17 +47,17 @@ class TestCase(unittest.TestCase):
     def test_diffTwoDates(self):
         # Setting up environmental variables which consist of varying date objects
         # pair 1, expect 0
-        date1a = datetime.date(2000, 5, 2)
-        date1b = datetime.date(2000, 5, 2)
+        date1a = task.datetime.date(2000, 5, 2)
+        date1b = task.datetime.date(2000, 5, 2)
         self.assertEqual(0, task.diffTwoDates(date1a, date1b))
         # pair 2, expect 3 when the dates are switched in the function call
-        date2a = datetime.date(2000, 5, 2)
-        date2b = datetime.date(2000, 4, 30)
+        date2a = task.datetime.date(2000, 5, 2)
+        date2b = task.datetime.date(2000, 4, 30)
         self.assertEqual(2, task.diffTwoDates(date2a, date2b))
         self.assertEqual(2, task.diffTwoDates(date2b, date2a))
         # Checking that leap year is accounted for in date difference
-        date3a = datetime.date(2020, 2, 21)
-        date3b = datetime.date(2020, 3, 1)
+        date3a = task.datetime.date(2020, 2, 21)
+        date3b = task.datetime.date(2020, 3, 1)
         self.assertEqual(8, task.diffTwoDates(date3a, date3b))
 
 
