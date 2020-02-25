@@ -33,8 +33,8 @@ class TestCase(unittest.TestCase):
         self.assertEqual(None, task.firstLastListElem(listEmpty))
         # Function returns a tuple of first and last value, so call assert on
         # first element, and second element of returned object of function
-        self.assertEqual(2, task.firstLastListElem(listOfOne[0]))
-        self.assertEqual(2, task.firstLastListElem(listOfOne[1]))
+        self.assertEqual(2, task.firstLastListElem(listOfOne)[0])
+        self.assertEqual(2, task.firstLastListElem(listOfOne)[1])
         # Expecting first and last element to be first and second element of
         # the list passed in to Function
         self.assertEqual(1, task.firstLastListElem(listOfTwo)[0])
