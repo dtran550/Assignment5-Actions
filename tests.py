@@ -65,6 +65,5 @@ class TestCase(unittest.TestCase):
         self.assertEqual(366, task.diffTwoDates(date4a, date4b))
 
 
-
 if __name__ == '__main__':
     unittest.main()
