@@ -30,19 +30,19 @@ class TestCase(unittest.TestCase):
         listOfTTwo = [1, 2]
         listOfThree = [1, 2, 3]
         # Expecting None when function is passed an empty list
-        assertEqual(None, firstLastListElem(listEmpty))
+        self.assertEqual(None, firstLastListElem(listEmpty))
         # Function returns a tuple of first and last value, so call assert on
         # first element, and second element of returned object of function
-        assertEqual(2, firstLastListElem(listOfOne[0]))
-        assertEqual(2, firstLastListElem(listOfOne[1]))
+        self.assertEqual(2, firstLastListElem(listOfOne[0]))
+        self.assertEqual(2, firstLastListElem(listOfOne[1]))
         # Expecting first and last element to be first and second element of
         # the list passed in to Function
-        assertEqual(1, firstLastListElem(listOfTTwo)[0])
-        assertEqual(2, firstLastListElem(listOfTTwo)[1])
+        self.assertEqual(1, firstLastListElem(listOfTTwo)[0])
+        self.assertEqual(2, firstLastListElem(listOfTTwo)[1])
         # Expecting first and last element of list passed in to function to be
         # correct
-        assertEqual(1, firstLastListElem(listOfTThree)[0])
-        assertEqual(3, firstLastListElem(listOfTThree)[3])
+        self.assertEqual(1, firstLastListElem(listOfTThree)[0])
+        self.assertEqual(3, firstLastListElem(listOfTThree)[3])
 
 
 if __name__ == '__main__':
