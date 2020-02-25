@@ -55,10 +55,15 @@ class TestCase(unittest.TestCase):
         date2b = task.datetime.date(2000, 4, 30)
         self.assertEqual(2, task.diffTwoDates(date2a, date2b))
         self.assertEqual(2, task.diffTwoDates(date2b, date2a))
-        # Checking that leap year is accounted for in date difference
+        # pair 3, Checking that leap year is accounted for in date difference
         date3a = task.datetime.date(2020, 2, 21)
         date3b = task.datetime.date(2020, 3, 1)
-        self.assertEqual(8, task.diffTwoDates(date3a, date3b))
+        self.assertEqual(9, task.diffTwoDates(date3a, date3b))
+        # pair 4, checking entire year difference
+        date4a = task.datetime.date(2020, 1, 1)
+        date3b = task.datetime.date(2021, 1, 1)
+        self.assertEqual(366, task.diffTwoDates(date4a, date4b))
+
 
 
 if __name__ == '__main__':
