@@ -42,7 +42,7 @@ class TestCase(unittest.TestCase):
         # Expecting first and last element of list passed in to function to be
         # correct
         self.assertEqual(1, task.firstLastListElem(listOfThree)[0])
-        self.assertEqual(3, task.firstLastListElem(listOfThree)[3])
+        self.assertEqual(3, task.firstLastListElem(listOfThree)[1])
 
 
 if __name__ == '__main__':
