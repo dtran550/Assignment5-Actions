@@ -63,6 +63,10 @@ class TestCase(unittest.TestCase):
         date4a = task.datetime.date(2020, 1, 1)
         date4b = task.datetime.date(2021, 1, 1)
         self.assertEqual(366, task.diffTwoDates(date4a, date4b))
+        # Ensuring faulty year values return None
+        date5a = task.datetime.date(2020, 1, 1)
+        date5b = task.datetime.date(0, 1, 1)
+        self.assertEqual(None, task.diffTwoDates(date5a, date5b))
 
 
 if __name__ == '__main__':
