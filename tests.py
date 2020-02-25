@@ -27,7 +27,7 @@ class TestCase(unittest.TestCase):
         # Setting up environmental variables which consist of lists of varying length
         listEmpty = []
         listOfOne = [2]
-        listOfTTwo = [1, 2]
+        listOfTwo = [1, 2]
         listOfThree = [1, 2, 3]
         # Expecting None when function is passed an empty list
         self.assertEqual(None, task.firstLastListElem(listEmpty))
@@ -37,12 +37,12 @@ class TestCase(unittest.TestCase):
         self.assertEqual(2, task.firstLastListElem(listOfOne[1]))
         # Expecting first and last element to be first and second element of
         # the list passed in to Function
-        self.assertEqual(1, task.firstLastListElem(listOfTTwo)[0])
-        self.assertEqual(2, task.firstLastListElem(listOfTTwo)[1])
+        self.assertEqual(1, task.firstLastListElem(listOfTwo)[0])
+        self.assertEqual(2, task.firstLastListElem(listOfTwo)[1])
         # Expecting first and last element of list passed in to function to be
         # correct
-        self.assertEqual(1, task.firstLastListElem(listOfTThree)[0])
-        self.assertEqual(3, task.firstLastListElem(listOfTThree)[3])
+        self.assertEqual(1, task.firstLastListElem(listOfThree)[0])
+        self.assertEqual(3, task.firstLastListElem(listOfThree)[3])
 
 
 if __name__ == '__main__':
