@@ -61,7 +61,7 @@ class TestCase(unittest.TestCase):
         self.assertEqual(9, task.diffTwoDates(date3a, date3b))
         # pair 4, checking entire year difference
         date4a = task.datetime.date(2020, 1, 1)
-        date3b = task.datetime.date(2021, 1, 1)
+        date4b = task.datetime.date(2021, 1, 1)
         self.assertEqual(366, task.diffTwoDates(date4a, date4b))
 
 
